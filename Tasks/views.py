@@ -1,7 +1,6 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 
-def HelloWord(request):
-    return HttpResponse('Hello World!')
+def TaskList(request):
+    return render(request, 'Tasks/Home.html')
