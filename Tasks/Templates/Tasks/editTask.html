@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Todo-List{% endblock %}
+{% block title %}Editando : {{ task.title }}{% endblock %}
 
 {% block content %}
-    
     <form method="POST" class="d-flex flex-column justify-content-center mb-3 mt-5" style="max-width: 50%; margin: auto">
         {% csrf_token %}
-
-        <h1 class="mb-3">Add Your Task</h1>
+    
+        <h1 class="mb-3">Editing the Task : {{ task.title }}</h1>
         {{ forms }}
-        <input type="submit" class="btn btn-primary mt-3" value="Add" />
+        <input type="submit" class="btn btn-primary mt-3" value="Edit" />
     </form>
 {% endblock %}
-
