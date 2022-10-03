@@ -1,7 +1,3 @@
-from secrets import choice
-from telnetlib import STATUS
-from turtle import done
-from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # Create your models here.
@@ -13,6 +9,8 @@ class Task(models.Model):
         (2, 'Done')
     )
 
-    title = models.CharField(_MAX_LENGTH=255)
+    title = models.CharField(max_length=255)
     description = models.TextField()
-    done = models.CharField(_MAX_LENGTH=1, choices=STATUS)
+    done = models.CharField(max_length=1, choices=STATUS)
+    created_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
