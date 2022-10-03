@@ -13,18 +13,22 @@
 </head>
 <body>
 
-    <div class="container-fluid d-flex justify-content-between mb-5 mt-5">
-        <h1>Todo-List</h1>
+        <h1 class="m-5">Todo-List</h1>
         
-        <div class="d-flex align-items-center justify-content-around bg-primary text-light p-2 rounded" style="width: 120px; height: 80%; font-size: 20px; cursor: pointer;">
-            <svg id="i-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="none"
-                stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                <path d="M16 2 L16 30 M2 16 L30 16" />
-            </svg>
-        
-            <div>Add</div>
+        <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex align-items-center justify-content-around bg-primary text-light p-2  rounded"
+                style="width: 120px; height: 80%; font-size: 20px; cursor: pointer;">
+                <svg id="i-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="none"
+                    stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M16 2 L16 30 M2 16 L30 16" />
+                </svg>
+            
+                <div>Add</div>
+            </div>
+
+            <input type="text" placeholder="Add your task here" class="form-control" style="width: 88%;"/>
         </div>
-    </div>    
+   
 
     <div class="card">
         <div class="card-header d-flex justify-content-between">
