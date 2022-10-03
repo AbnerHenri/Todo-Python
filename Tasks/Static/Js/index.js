@@ -1,1 +1,3 @@
-console.log('Funcionando')
+function RedirectRoute(route){
+    window.location.href = route
+}
