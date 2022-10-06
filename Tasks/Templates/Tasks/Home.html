@@ -15,9 +15,9 @@
 
         <h1 class="m-5">Todo-List</h1>
         
-        <div class="d-flex justify-content-between mb-3" style="text-decoration: none;">
-            <div onclick="RedirectRoute('addTask')" class="d-flex align-items-center justify-content-around bg-primary text-light p-2  rounded"
-                style="width: 120px; height: 80%; font-size: 20px; cursor: pointer;">
+        <div class="d-flex mb-3" style="text-decoration: none;">
+            <div onclick="RedirectRoute('addTask')" class=" me-3 d-flex align-items-center justify-content-around bg-primary text-light p-2  rounded"
+                style="width: 120px; height: 57px; font-size: 20px; cursor: pointer;">
                 <svg id="i-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="none"
                     stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <path d="M16 2 L16 30 M2 16 L30 16" />
@@ -26,8 +26,11 @@
                 <div>Add</div>
             </div>
 
-            <input type="text" placeholder="Add title your task here" class="form-control" style="width: 42%;"/>
-            <input type="text" placeholder="Add your task here" class="form-control" style="width: 42%;" />
+            {% if messages %}
+                {% for msg in messages %}
+                    <p class="alert alert-info" style="width: 80%;">{{ msg }}</p>
+                {% endfor %}
+            {% endif %}
         </div>
 
 
