@@ -1,4 +1,3 @@
-import re
 from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Task
@@ -40,3 +39,9 @@ def EditTask(request, id):
             
     else:
         return render(request, 'Tasks/editTask.html', {'forms': form, 'task': task})
+
+
+def DelTask(request, id):
+        task = get_object_or_404(Task, pk=id)
+        task.delete()
+        return redirect('/')
